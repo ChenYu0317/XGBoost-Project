@@ -32,7 +32,7 @@ from sklearn import preprocessing
   print(df_1["line_time_flag"].unique())
   line_timing_model = spark.createDataFrame(df)
   line_timing_model.createOrReplaceTempView("line_timing_model")
-  line_timing_model.write.parquet("/user/Z00043597/line_time_model/line_timing_model",compression="gzip",mode ='overwrite')
+  line_timing_model.write.parquet("/user/line_time_model/line_timing_model",compression="gzip",mode ='overwrite')
   
   # Data Preprocessing 
     
